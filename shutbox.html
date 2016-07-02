@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<a href="dicefive.html" >Dicefive</a>
+<a href="winlose.html" >Winlose</a>
+<a href="blackjack.html" >Blackjack</a>
+<a href="reset.html" >reset</a>
+	<p>Blackjack</p>
+	<p>Gamble!</p>
+	<p>You have</p>
+	<p id="mon"></p>
+	<p>dollars</p>
+	<p>How much do you want to bet?</p>
+    <input type="text" id="betting"></input>
+	<button class="hit">roll</button>
+    <p id="finbet"></p>
+    <p id="total">0</p>
+    <p id="score">0</p>
+    <p id="a">1</p>
+    <p id="b">2</p>
+    <p id="c">3</p>
+    <p id="d">4</p>
+    <p id="e">5</p>
+    <p id="f">6</p>
+    <p id="g">7</p>
+    <p id="h">8</p>
+    <p id="i">9</p>
+    <p id="j">10</p>
+    <p id="k">11</p>
+    <p id="l">12</p>
+    <p id="did"></p>
+    <p id="amount"></p>
+    <p>dollars!</p>
+<script src="jquery.js"></script>
+<script>
+$("#a").text(1);
+$("#b").text(2);
+$("#c").text(3);
+$("#d").text(4);
+$("#e").text(5);
+$("#f").text(6);
+$("#g").text(7);
+$("#h").text(8);
+$("#i").text(9);
+$("#j").text(10);
+$("#k").text(11);
+$("#l").text(12);
+nan=isNaN(localStorage.getItem("money"))
+if (nan==true){
+	money=100
+}
+money=localStorage.getItem("money");
+if (typeof(Storage) != "undefined")
+  {
+  // Store
+  localStorage.setItem("money", money);
+  // Retrieve
+  document.getElementById("mon").innerHTML=localStorage.getItem("money");
+  }
+else
+  {
+  document.getElementById("mon").innerHTML="Sorry, your browser does not support Web Storage...";
+  }
+	$(".hit").click(function(){
+		var a=document.getElementById("a").textContent
+		var b=document.getElementById("b").textContent
+		var c=document.getElementById("c").textContent
+		var d=document.getElementById("d").textContent
+		var e=document.getElementById("e").textContent
+		var f=document.getElementById("f").textContent
+		var g=document.getElementById("g").textContent
+		var h=document.getElementById("h").textContent
+		var i=document.getElementById("i").textContent
+		var j=document.getElementById("j").textContent
+		var k=document.getElementById("k").textContent
+		var l=document.getElementById("l").textContent
+		var chance=Math.floor((Math.random()*12)+1);
+		document.getElementById("a").onmousedown=function()
+		{
+			$("#a").fadeOut(1000);
+			var score=document.getElementById("score").textContent
+			var a=document.getElementById("a").innerHTML
+			$("#score").text(Number(score)+1)
+			$("#finbet").text(document.getElementById("betting").value);
+		}
+		var bet=document.getElementById("finbet").textContent;
+		var total=(Number(a)+Number(b)+Number(c)+Number(d)+Number(e)+Number(f)+Number(g)+Number(h)+Number(i)+Number(j)+Number(k)+Number(l)+Number(m)+Number(n)+Number(o)+Number(p)+Number(q)+Number(r)+Number(s)+Number(t)+Number(u));
+		$("#total").text(total);
+		if (total>=22){
+			var bet=document.getElementById("finbet").textContent;
+			var money=localStorage.getItem("money");
+			$("#mon").text(Number(money) - Number(bet));
+			var money=document.getElementById("mon").textContent;
+			localStorage.setItem("money", money);
+			$("#a").text(0);
+			$("#b").text(0);
+			$("#c").text(0);
+			$("#d").text(0);
+			$("#e").text(0);
+			$("#f").text(0);
+			$("#g").text(0);
+			$("#h").text(0);
+			$("#i").text(0);
+			$("#j").text(0);
+			$("#k").text(0);
+			$("#l").text(0);
+			$("#m").text(0);
+			$("#n").text(0);
+			$("#o").text(0);
+			$("#p").text(0);
+			$("#q").text(0);
+			$("#r").text(0);
+			$("#s").text(0);
+			$("#t").text(0);
+			$("#u").text(0);
+			var done=1
+		}
+	});
+	localStorage.setItem("money", money);
+	document.getElementById("mon").innerHTML=localStorage.getItem("money");
+</script>
+</body>
+</html>

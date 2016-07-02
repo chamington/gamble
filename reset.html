@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<a href="dicefive.html" >Dicefive</a>
+<script src="jquery.js"></script>
+<script>
+conf=confirm ("are you sure you want to clear all data storage?");
+if (conf==true){
+if (typeof(Storage) != "undefined")
+  {
+  // Store
+  localStorage.setItem("money", 100);
+  // Retrieve
+  document.getElementById("mon").innerHTML=localStorage.getItem("money");
+  }
+else
+  {
+  document.getElementById("mon").innerHTML="Sorry, your browser does not support Web Storage...";
+  }
+}
+</script>
+</body>
+</html>

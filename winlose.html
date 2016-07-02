@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<a href="dicefive.html" >Dicefive</a>
+<a href="winlose.html" >Winlose</a>
+<a href="blackjack.html" >Blackjack</a>
+<a href="reset.html" >reset</a>
+	<p>Winlose!</p>
+	<p>Gamble!</p>
+	<p>You have</p>
+	<p id="mon"></p>
+	<p>dollars</p>
+	<p>How much do you want to bet?</p>
+	<input type="text" id="betting"></input>
+	<button class="bet">bet</button>
+    <p id="did"></p>
+    <p id="amount"></p>
+    <p>dollars!</p>
+<script src="jquery.js"></script>
+<script>
+nan=isNaN(localStorage.getItem("money"))
+if (nan==true){
+	money=100
+}
+money=localStorage.getItem("money");
+if (typeof(Storage) != "undefined")
+  {
+  // Store
+  localStorage.setItem("money", money);
+  // Retrieve
+  document.getElementById("mon").innerHTML=localStorage.getItem("money");
+  }
+else
+  {
+  document.getElementById("mon").innerHTML="Sorry, your browser does not support Web Storage...";
+  }
+	$(".bet").click(function(){
+		var bet=document.getElementById("betting").value;
+		var winlose=Math.floor((Math.random()*2)+1);
+		var amount=Math.floor((Math.random()*bet)+1);
+		var money=document.getElementById("mon").textContent;
+		localStorage.setItem("money", money);
+  // Retrieve
+  document.getElementById("mon").innerHTML=localStorage.getItem("money");
+		if (winlose==1)
+		{
+			$("#mon").text(Number(money) + Number(amount));
+			var money=document.getElementById("mon").textContent;
+			localStorage.setItem("money", money);
+			$("#did").text("won");
+			$("#amount").text(amount);
+		}
+		else {
+			$("#mon").text(Number(money) - Number(amount));
+			var money=document.getElementById("mon").textContent;
+			localStorage.setItem("money", money);
+			$("#did").text("lost");
+			$("#amount").text(amount);
+		}
+	});
+	localStorage.setItem("money", money);
+	document.getElementById("mon").innerHTML=localStorage.getItem("money");
+</script>
+</body>
+</html>

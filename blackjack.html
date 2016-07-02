@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<a href="dicefive.html" >Dicefive</a>
+<a href="winlose.html" >Winlose</a>
+<a href="blackjack.html" >Blackjack</a>
+<a href="reset.html" >reset</a>
+	<p>Blackjack</p>
+	<p>Gamble!</p>
+	<p>You have</p>
+	<p id="mon"></p>
+	<p>dollars</p>
+	<p>How much do you want to bet?</p>
+    <input type="text" id="betting"></input>
+	<button class="hit">hit</button>
+    <button class="stand">stand</button>
+    <p id="finbet"></p>
+    <p id="total">0</p>
+    <p id="a">0</p>
+    <p id="b">0</p>
+    <p id="c">0</p>
+    <p id="d">0</p>
+    <p id="e">0</p>
+    <p id="f">0</p>
+    <p id="g">0</p>
+    <p id="h">0</p>
+    <p id="i">0</p>
+    <p id="j">0</p>
+    <p id="k">0</p>
+    <p id="l">0</p>
+    <p id="m">0</p>
+    <p id="n">0</p>
+    <p id="o">0</p>
+    <p id="p">0</p>
+    <p id="q">0</p>
+    <p id="r">0</p>
+    <p id="s">0</p>
+    <p id="t">0</p>
+    <p id="u">0</p>
+    <p id="did"></p>
+    <p id="amount"></p>
+    <p>dollars!</p>
+<script src="jquery.js"></script>
+<script>
+$("#a").text(0);
+$("#b").text(0);
+$("#c").text(0);
+$("#d").text(0);
+$("#e").text(0);
+$("#f").text(0);
+$("#g").text(0);
+$("#h").text(0);
+$("#i").text(0);
+$("#j").text(0);
+$("#k").text(0);
+$("#l").text(0);
+$("#m").text(0);
+$("#n").text(0);
+$("#o").text(0);
+$("#p").text(0);
+$("#q").text(0);
+$("#r").text(0);
+$("#s").text(0);
+$("#t").text(0);
+$("#u").text(0);
+nan=isNaN(localStorage.getItem("money"))
+if (nan==true){
+	money=100
+}
+money=localStorage.getItem("money");
+if (typeof(Storage) != "undefined")
+  {
+  // Store
+  localStorage.setItem("money", money);
+  // Retrieve
+  document.getElementById("mon").innerHTML=localStorage.getItem("money");
+  }
+else
+  {
+  document.getElementById("mon").innerHTML="Sorry, your browser does not support Web Storage...";
+  }
+	$(".hit").click(function(){
+		var a=document.getElementById("a").textContent
+		var b=document.getElementById("b").textContent
+		var c=document.getElementById("c").textContent
+		var d=document.getElementById("d").textContent
+		var e=document.getElementById("e").textContent
+		var f=document.getElementById("f").textContent
+		var g=document.getElementById("g").textContent
+		var h=document.getElementById("h").textContent
+		var i=document.getElementById("i").textContent
+		var j=document.getElementById("j").textContent
+		var k=document.getElementById("k").textContent
+		var l=document.getElementById("l").textContent
+		var m=document.getElementById("m").textContent
+		var n=document.getElementById("n").textContent
+		var o=document.getElementById("o").textContent
+		var p=document.getElementById("p").textContent
+		var q=document.getElementById("q").textContent
+		var r=document.getElementById("r").textContent
+		var s=document.getElementById("s").textContent
+		var t=document.getElementById("t").textContent
+		var u=document.getElementById("u").textContent
+		var chance=Math.floor((Math.random()*12)+1);
+		if (document.getElementById("a").innerHTML==0)
+		{
+			$("#a").text(chance);
+			var a=document.getElementById("a").innerHTML
+			$("#finbet").text(document.getElementById("betting").value);
+			
+		}
+		else {
+			if (document.getElementById("b").innerHTML==0) {
+				$("#b").text(chance);
+				var b=document.getElementById("b").innerHTML
+			}
+			else
+			{
+				if (document.getElementById("c").innerHTML==0) {
+					$("#c").text(chance);
+					var c=document.getElementById("c").innerHTML
+				}
+				else
+				{
+					if (document.getElementById("d").innerHTML==0) {
+						$("#d").text(chance);
+						var d=document.getElementById("d").innerHTML
+					}
+					else
+					{
+						if (document.getElementById("e").innerHTML==0) {
+							$("#e").text(chance);
+							var e=document.getElementById("e").innerHTML
+						}
+						else
+						{
+							if (document.getElementById("f").innerHTML==0)
+		{
+			$("#f").text(chance);
+			var f=document.getElementById("f").innerHTML
+		}
+		else {
+			if (document.getElementById("g").innerHTML==0) {
+				$("#g").text(chance);
+				var g=document.getElementById("g").innerHTML
+			}
+			else
+			{
+				if (document.getElementById("h").innerHTML==0) {
+					$("#h").text(chance);
+					var h=document.getElementById("h").innerHTML
+				}
+				else
+				{
+					if (document.getElementById("i").innerHTML==0) {
+						$("#i").text(chance);
+						var i=document.getElementById("i").innerHTML
+					}
+					else
+					{
+						if (document.getElementById("j").innerHTML==0) {
+							$("#j").text(chance);
+							var j=document.getElementById("j").innerHTML
+						}
+						else
+						{
+							if (document.getElementById("k").innerHTML==0)
+		{
+			$("#k").text(chance);
+			var k=document.getElementById("k").innerHTML
+		}
+		else {
+			if (document.getElementById("l").innerHTML==0) {
+				$("#l").text(chance);
+				var l=document.getElementById("l").innerHTML
+			}
+			else
+			{
+				if (document.getElementById("m").innerHTML==0) {
+					$("#m").text(chance);
+					var m=document.getElementById("m").innerHTML
+				}
+				else
+				{
+					if (document.getElementById("n").innerHTML==0) {
+						$("#n").text(chance);
+						var n=document.getElementById("n").innerHTML
+					}
+					else
+					{
+						if (document.getElementById("o").innerHTML==0) {
+							$("#o").text(chance);
+							var o=document.getElementById("o").innerHTML
+						}
+						else
+						{
+							if (document.getElementById("p").innerHTML==0)
+		{
+			$("#p").text(chance);
+			var p=document.getElementById("p").innerHTML
+		}
+		else {
+			if (document.getElementById("q").innerHTML==0) {
+				$("#p").text(chance);
+				var q=document.getElementById("q").innerHTML
+			}
+			else
+			{
+				if (document.getElementById("r").innerHTML==0) {
+					$("#r").text(chance);
+					var r=document.getElementById("r").innerHTML
+				}
+				else
+				{
+					if (document.getElementById("s").innerHTML==0) {
+						$("#s").text(chance);
+						var s=document.getElementById("s").innerHTML
+					}
+					else
+					{
+						if (document.getElementById("t").innerHTML==0) {
+							$("#t").text(chance);
+							var t=document.getElementById("t").innerHTML
+						}
+						else
+						{
+							$("#u").text(chance);
+							var u=document.getElementById("u").innerHTML
+						}
+					}
+				}
+			}
+		}
+						}
+					}
+				}
+			}
+		}
+						}
+					}
+				}
+			}
+		}
+						}
+					}
+				}
+			}
+		}
+		var bet=document.getElementById("finbet").textContent;
+		var total=(Number(a)+Number(b)+Number(c)+Number(d)+Number(e)+Number(f)+Number(g)+Number(h)+Number(i)+Number(j)+Number(k)+Number(l)+Number(m)+Number(n)+Number(o)+Number(p)+Number(q)+Number(r)+Number(s)+Number(t)+Number(u));
+		$("#total").text(total);
+		if (total>=22){
+			var bet=document.getElementById("finbet").textContent;
+			var money=localStorage.getItem("money");
+			$("#mon").text(Number(money) - Number(bet));
+			var money=document.getElementById("mon").textContent;
+			localStorage.setItem("money", money);
+			$("#a").text(0);
+			$("#b").text(0);
+			$("#c").text(0);
+			$("#d").text(0);
+			$("#e").text(0);
+			$("#f").text(0);
+			$("#g").text(0);
+			$("#h").text(0);
+			$("#i").text(0);
+			$("#j").text(0);
+			$("#k").text(0);
+			$("#l").text(0);
+			$("#m").text(0);
+			$("#n").text(0);
+			$("#o").text(0);
+			$("#p").text(0);
+			$("#q").text(0);
+			$("#r").text(0);
+			$("#s").text(0);
+			$("#t").text(0);
+			$("#u").text(0);
+			var done=1
+		}
+	});
+	$(".stand").click(function(){
+		var deal=Math.floor((Math.random()*11)+10);
+		var money=document.getElementById("mon").textContent;
+		var bet=document.getElementById("finbet").textContent;
+		var total=document.getElementById("total").textContent;
+		$("#total").text(deal)
+		if (deal>>total){
+			$("#mon").text(Number(money) - Number(bet));
+			var money=document.getElementById("mon").textContent;
+			localStorage.setItem("money", money);
+			$("#a").text(0);
+			$("#b").text(0);
+			$("#c").text(0);
+			$("#d").text(0);
+			$("#e").text(0);
+			$("#f").text(0);
+			$("#g").text(0);
+			$("#h").text(0);
+			$("#i").text(0);
+			$("#j").text(0);
+			$("#k").text(0);
+			$("#l").text(0);
+			$("#m").text(0);
+			$("#n").text(0);
+			$("#o").text(0);
+			$("#p").text(0);
+			$("#q").text(0);
+			$("#r").text(0);
+			$("#s").text(0);
+			$("#t").text(0);
+			$("#u").text(0);
+		}
+		else{
+			if (deal<<total){
+			$("#mon").text(Number(money) + Number(bet));
+			var money=document.getElementById("mon").textContent;
+			localStorage.setItem("money", money);
+			$("#a").text(0);
+			$("#b").text(0);
+			$("#c").text(0);
+			$("#d").text(0);
+			$("#e").text(0);
+			$("#f").text(0);
+			$("#g").text(0);
+			$("#h").text(0);
+			$("#i").text(0);
+			$("#j").text(0);
+			$("#k").text(0);
+			$("#l").text(0);
+			$("#m").text(0);
+			$("#n").text(0);
+			$("#o").text(0);
+			$("#p").text(0);
+			$("#q").text(0);
+			$("#r").text(0);
+			$("#s").text(0);
+			$("#t").text(0);
+			$("#u").text(0);
+		}
+		}
+		var done=1
+		
+		localStorage.setItem("money", money);
+  // Retrieve
+  document.getElementById("mon").innerHTML=localStorage.getItem("money");
+	});
+	localStorage.setItem("money", money);
+	document.getElementById("mon").innerHTML=localStorage.getItem("money");
+</script>
+</body>
+</html>
